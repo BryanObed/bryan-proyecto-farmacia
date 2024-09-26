@@ -1,0 +1,159 @@
+Patrón Modelo-Vista-Controlador (MVC)
+
+El patrón Modelo Vista Controlador, o por su abreviatura MVC, es un patrón de arquitectura que separa los datos de una aplicación, la interfaz de usuario y la lógica en tres componentes distintos.
+
+MVC es una forma de organizar las funciones principales de su código, para que al compartir su aplicación con otros el proceso sea mucho más rápido, fácil y limpio. 
+
+Definición de cada sigla
+
+Modelo(M): Es la capa donde se trabaja con los datos, aquí es donde tendremos las funciones para acceder, insertar, modificar y eliminar la información de la base de datos.
+
+Vista(V): También son conocidas como interfaz de usuario, es donde el usuario va a interactuar con la aplicación, en la vista trabajamos con los datos, pero no accedemos directamente a estos.
+
+Controlador(C): Contiene el código necesario para responder a las aciones que realizan los usuarios, por ejemplo, cuando presionan un botón, suben un archivo, solicitan determinada información, etc. Su responsabilidad se basa en servir como puente entre las vistas y los modelos, se puede decir, que es el cerebro de la aplicación.
+
+FUNDAMENTOS JAVA SWING:
+
+java tiene una clase llamada JFrame, la cual permite generar ventanas y añadir distintos componentes con los que va a interactuar el usuario.
+
+
+Esta clase funciona con la biblioteca gráfica Swing y permite implementar diversos eventos para mostrar un mensaje en pantalla, reconocer un clic, una entrada por teclado y muchas acciones a determinados elementos de la interfaz.
+
+Librería Swing
+
+Las librerías son colecciones compartidas de código que los programadores pueden utilizar para trabajar entre sí. Suelen incluir funciones que pueden ser utilizadas comúnmente entre los programadores. 
+
+La librería Swing es una biblioteca gráfica que contiene componentes como: cajas de texto, botones, tablas, marcos, entre otros. También, cabe destacar que estos componentes están asociados con la infraestructura AWT, la cual contiene otros componentes que están asociados con los eventos, estos pueden ser eventos de acción, del teclado y del mouse.
+
+CONTENEDORES Y COMPONENTES
+​​Los contenedores son clases abstractas derivada de la clase Components, estos permiten almacenar, alojar o contener elementos gráficos, se puede asemejar a un lienzo, el cual vamos a pintar.
+Por otro lado, los componentes son todos los elementos que vemos en la pantalla, esto es: paneles, botones, casillas de verificación, etiquetas, entre otros.
+
+Dicho esto, revisemos los tipos de componentes  y contenedores más utilizados en java.
+
+1. JLabel
+Los JLabel son etiquetas de texto que podemos colocar en un Frame, pero además de textos podemos colocar imágenes para darle una buena presentación a nuestra ventana, son esenciales al momento de crear una interfaz de usuario.
+
+En la siguiente imagen puedes observar la paleta que nos proporciona el asistente gráfico de Netbeans, para usar una etiqueta simplemente debemos arrastrar y soltar, después damos doble clic y colocamos el texto que necesitemos.
+
+2. JButton
+Es un componente muy útil, el cuál va a permitir al usuario interactuar con el sistema, por medio de los botones podemos solicitar información, registrar, modificar y eliminar registros.
+
+En la siguiente imagen puedes observar que en la también encontramos el botón, simplemente arrastramos y soltamos, después presionamos doble clic y colocamos el nombre al botón.
+
+3. JTabbedPane
+Este componente es un contenedor que contiene muchas pestañas, esto es muy útil ya que solo esta visible lo que esta el la pestaña actual y las otras quedan ocultas.
+
+En la siguiente imagen puedes observar una ventana con dos pestañas, para hacer esto primero debemos arrastrar el JTabbedPane al JFrame y estirarlo de tal manera que ocupe todo el espacio. Después para crear las pestañas, presionamos clic derecho, seleccionamos Add From Palette > Swing Containers y Panel, de esta manera se irán creando las pestañas.
+
+4.JTextField
+Un JTextField o campo de texto es un componente utilizado para la captura de datos, estos son casi indispensables en una aplicación.
+
+En la siguiente imagen puedes observar un programa que solicita el nombre del usuario, este tendrá que insertarlo en la caja de texto que hemos colocado.
+
+Esta caja de texto también la arrastramos de la paleta proporcionada por Netbeans. Como puedes apreciar, la ventana contiene distintos elementos: etiquetas, caja de texto y botón.
+
+5. JTable
+Un JTable es un componente visual de java que nos permite dibujar una tabla, de forma que en cada fila/columna de la tabla podamos poner el dato que queramos; un nombre, un apellido, una edad, un número, entre otros.
+
+En la siguiente imagen puedes observar una tabla con los datos de un estudiante del grado 11B, si estuviéramos conectados a una base de datos los registros serían mucho más.
+
+La tabla también la arrastramos de la paleta y su tamaño lo podemos aumentar o disminuir presionando una de las esquinas de la tabla y estirando de acuerdo a las necesidades del programa.
+
+Lo anterior, son los componentes más utilizados en la creación de interfaz con Java Swing, ahora hablemos sobre los contenedores de dichos componentes.
+
+6. JFrame
+Un JFrame es un contenedor que puede alojar componentes como botones, etiquetas, campos de texto, etc.
+
+Por defecto viene con un título, un borde y botones para minimizar, maximizar y cerrar la ventana. Este es el contenedor más utilizado para programar aplicaciones, adicionalmente permite otros contenedores como JInternalFrame o JPanel.
+
+En la siguiente imagen puedes observar un JFrame con su icono, un título en la parte superior, los botones para minimizar, maximizar y cerrar. Por otra parte, dentro del contenedor se encuentra una etiqueta, un botón, un slider y un checkbox.
+
+7. JPanel
+Un JPanel es un contenedor simple, el cual permite almacenar otros componentes de forma independiente, es decir, podemos decidir en qué panel colocar un botón, una caja de texto, una etiqueta, entre otros.
+
+Cabe aclarar que cuando ocultamos un panel los elementos que este contiene también se ocultarán. En la siguiente imagen puedes observar un JFrame con tres paneles en su interior, el panel 1 y 2 alojan en su interior una etiqueta, por otro lado el tercer panel aloja un botón, por eso se puede decir que cada componente está de forma independiente.
+
+8. JDialog
+Este contenedor representa una ventana de tipo ventana de diálogo, es recomendable utilizarla como ventana secundaria porque sus propiedades dependen de la ventana principal o JFrame. El JDialog contiene modals, esto significa que se pueden habilitar y no permitirá acceder a otras ventanas mientras la ventana secundaria esté cerrada.
+
+En la siguiente imagen puedes observar un JFrame principal, el cual tiene un label y un botón, al presionar en el botón se abre la ventana secundaria, la cual puedes diferenciar porque no tiene el botón de minimizar ni maximizar, solo el botón de cerrar. Otra de las características es que mientras no cierre la ventana secundaria no podré acceder a la ventana principal, porque en este caso se ha definido el modal en true.
+
+Layouts en Java
+En esta nueva entrega del curso de Java vamos a explicar los gestores de distribución de elementos y las diversas formas de la colocación de los elementos (botones, espacios de texto, etc.), y de distribución en nuestra GUI.
+
+Para organizar los componentes de una interfaz de usuario, debemos utilizar un conjunto de clases llamadas gestores de distribución.
+
+Los gestores ayudan a adaptar los componentes que se desean incorporar a un contenedor
+
+Para elegir la distribución que tendrá la venta, simplemente debemos crear un JFrame, presionar clic derecho > Set Layout y seleccionar la opción que se adapte a nuestras necesidades.
+
+1. FlowLayout
+Los componentes añadidos a un panel con FlowLayout se encadenan en forma de lista. La cadena es horizontal, de izquierda a derecha, y se puede seleccionar el espaciado entre cada componente.
+
+De igual forma, si el contenedor se cambia de tamaño en tiempo de ejecución, las posiciones de los componentes se ajustarán automáticamente.
+
+Para colocar una ventana en FlowLayout, debe presionar clic derecho Set Layout > FlowLayout.
+
+2. BoxLayout
+Este componente es más elaborado que el FlowLayout, ya que permite alinear los elementos de forma horizontal o vertical. Para colocar una ventana en BoxLayout, debe presionar clic derecho Set Layout > BoxLayout.
+ 
+3. BorderLayout
+Es el gestor de distribución por defecto del objeto contentPane para los marcos y ventanas. Este layout divide un contenedor en cinco secciones: norte, sur, este, oeste y centro. Para colocar una ventana en BoxLayout, debe presionar clic derecho Set Layout > BorderLayout.
+
+4. GridLayout
+Simplemente, hace que un grupo de componentes tenga el mismo tamaño y los muestra en el número solicitado de filas y columnas. Para colocar una ventana en BoxLayout, debe presionar clic derecho Set Layout > GridLayout.
+
+5. AbsoluteLayout
+Los componentes que se colocan en posición absoluta permiten al programador indicar las coordenadas en las que estarán, el problema es que es más difícil conseguir que el programa se vea uniforme en múltiples plataformas. Para colocar una ventana en AbsoluteLayout, debe presionar clic derecho Set Layout > AbsoluteLayout.
+
+
+** Eventos en Java **
+Cómo vimos en la analogía, un evento es una acción que puede realizar un usuario en determinado objeto. En este caso, el usuario al tocar el timbre (objeto) producirá un evento que hará sonar el timbre, de igual forma funciona una aplicación, si un usuario presiona el botón cerrar, el programa se cerrará; si presiona consultar registros, el programa traerá todos los registros, ese es el fin de un evento.
+
+Sin embargo, para controlar los eventos existen escuchadores o listeners, estos esperan que el evento se produzca para realizar determinadas acciones, siguiendo con la analogía, el escuchador sería el timbre, el cual tiene como instrucción producir el sonido después que el usuario presione el botón.
+
+Cada evento tiene sus propios escuchadores y siempre es necesario asociar un evento con un escuchador. Además, cada escuchador tiene una serie de métodos que se deben implementar obligatoriamente, sin importar que solo vayas a utilizar un solo método.
+
+Veamos los tipos de listener más utilizados, su definición, sus métodos y los eventos que controlan.
+
+1. ActionListener
+El escuchador de acción o ActionListener es un controlador de eventos que ejecuta una tarea cuando se lleva a cabo una acción por el usuario. Al implementar esta interfaz es necesario generar su método asociado:
+
+-actionPermormed: se ejecuta cuando se presiona un botón, se mueve el ratón, se pulsa una tecla o se selecciona una opción del menú.
+
+2. KeyListener
+Esta interfaz sirve para recibir eventos del teclado, es decir, que se activa al presionar o soltar una tecla. Al implementar esta interfaz el entorno de desarrollo solicitará que generes los tres métodos asociados:
+
+-keyPressed: este método se ejecuta al presionar una tecla.
+-keyPressed: este método se ejecuta cada vez que dejas de presionar una tecla. 
+-keyPressed: este método se ejecuta cada ves que presionas y sueltas una tecla.
+
+3. MouseListener
+El escuchador del mouse se ejecuta cada vez que cambia el estado del mouse, por ejemplo, al mover el mouse, presionar un clic, o quitar el mouse de un elemento. Esta interfaz tiene cinco métodos asociados:
+
+-mouseClicked: se ejecuta cuando se presiona y se suelta un elemento con ratón, no debe confundirse con el mouse pressed.
+-mouseEntered: se usa para indicar al programa que el mouse está situado sobre un elemento de la interfaz gráfica.
+-mouseExited: se usa para indicar al programa que el mouse dejó de situarse sobre un elemento de la interfaz gráfica.
+-mousePressed: se usa para indicar que se presionó un elemento de la interfaz, aquí el evento se produce simplemente con presionar, a diferencia del mouseClicked que es presionar y soltar.
+-mouseReleased: se usa para indicar que se dejó de presionar un boton del mouse.
+
+
+¿Qué son las excepciones?
+El manejo de excepciones es uno de los métodos más poderosos para capturar los errores en ejecución. En java una excepción es un evento que interrumpe el desarrollo de un programa.
+
+Para manejar excepciones son utilizados los programas: ClassNotFoundException, IOException, SQLException, RemoteException, etc. Las tres palabras para el tratamiento de excepciones son: try, catch y finally.
+
+-try(intentar): Todo el código que vaya dentro de esta sentencia será el código sobre el que se intentará capturar el error si se produce  y una vez capturado hacer algo con él.
+
+-cath(capturar): En este  bloque definimos el conjunto de instrucciones necesarias o de tratamienyo del problema capturado en el bloque try anterior. Después de la palabra catch es necesario colocar dos paréntesis con un Exception, SQLException o cualquier otro tipo de excepsión, esto sirve para guardar información del error y enviar el objeto al catch.
+
+-finally(por último): Para finalizar tenemos el bloque finally que es un bloque donde prodemos definir un conjunto de instrucciones necesarias tanto si se produce un error como si no y que por tanto se ejecuta siempre. Este bloque es opcional, casi nunca se usa.
+
+Algunos Manejo de Excepciones:
+*ClassNotFoundException
+*IOException
+*SQLException
+*RemoteException
+
+- DESCARGAR LIBRERÍA PARA EL AUTOCOMPLETADO
